@@ -1,4 +1,4 @@
-from random import random
+from random import uniform
 
 def monte_carlo_3d():
     N = 10000
@@ -8,9 +8,9 @@ def monte_carlo_3d():
 
     n = 0
     for _ in range(N):
-        x = 2 * c * (random() - 0.5)
-        y = 2 * c * (random() - 0.5)
-        z = b * random()
+        x = uniform(-c, c)
+        y = uniform(-c, c)
+        z = uniform(0, b)
 
         if (x*x + y*y)**a < z:
             n += 1

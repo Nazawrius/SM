@@ -1,4 +1,4 @@
-from random import random
+from random import uniform
 
 def monte_carlo_2d():
     N = 10000
@@ -7,8 +7,8 @@ def monte_carlo_2d():
 
     n = 0
     for _ in range(N):
-        x = 12 * (random() - 0.5)
-        y = 12 * (random() - 0.5)
+        x = uniform(-a, a)
+        y = uniform(-a, a)
 
         if x*x/(a*a) + y*y/(b*b) <= 1 and x*x/(b*b) + y*y/(a*a) <= 1:
             n += 1
